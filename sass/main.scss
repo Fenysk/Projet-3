@@ -78,3 +78,65 @@ header{
     }
 }
 // Localisation
+
+
+
+.introduction{
+    text-align: center;
+
+    padding-top: 48px;
+    padding-bottom: 56px;
+    padding-left: 40px;
+    padding-right: 40px;
+
+    background-color: rgb(246,246,246);
+    p{
+        margin-top: 24px;
+    }
+    .introduction__bouton{
+        margin-top: 34px;
+        padding: 18px 20px;
+    
+        border-radius: 50px;
+    
+        display: inline-block;
+    
+        color: white;
+    
+        background: linear-gradient(180deg,#ff79da,#9356dc);
+        box-shadow: 0 5px 10px #AAAAAA;
+    }
+}
+// Introduction
+
+
+.fonctionnement{
+    padding-top: 56px;
+    padding-bottom: 68px;
+    padding-left: 20px;
+    padding-right: 20px;
+    li{
+        height: 72px;
+        margin-top: 32px;
+        padding-left: 32px;
+
+        display: flex;
+        align-items: center;
+
+        border-radius: 15px;
+
+        background-color: rgb(246,246,246);
+        box-shadow: 0 5px 15px #DDDDDD;
+        i{
+            color: rgb(127, 127, 127);
+            margin-right: 26px;
+        }
+        &:hover{
+            background-color: rgb(244,237,254);
+            i{
+                color: rgb(139,89,213);
+            }
+        }
+    }
+}
+// Comment ça marche ?

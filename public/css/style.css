@@ -73,4 +73,52 @@ header img {
   margin-right: 18px;
 }
 
+.introduction {
+  text-align: center;
+  padding-top: 48px;
+  padding-bottom: 56px;
+  padding-left: 40px;
+  padding-right: 40px;
+  background-color: #f6f6f6;
+}
+.introduction p {
+  margin-top: 24px;
+}
+.introduction .introduction__bouton {
+  margin-top: 34px;
+  padding: 18px 20px;
+  border-radius: 50px;
+  display: inline-block;
+  color: white;
+  background: linear-gradient(180deg, #ff79da, #9356dc);
+  box-shadow: 0 5px 10px #AAAAAA;
+}
+
+.fonctionnement {
+  padding-top: 56px;
+  padding-bottom: 68px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.fonctionnement li {
+  height: 72px;
+  margin-top: 32px;
+  padding-left: 32px;
+  display: flex;
+  align-items: center;
+  border-radius: 15px;
+  background-color: #f6f6f6;
+  box-shadow: 0 5px 15px #DDDDDD;
+}
+.fonctionnement li i {
+  color: #7f7f7f;
+  margin-right: 26px;
+}
+.fonctionnement li:hover {
+  background-color: #f4edfe;
+}
+.fonctionnement li:hover i {
+  color: #8b59d5;
+}
+
 /*# sourceMappingURL=style.css.map */
