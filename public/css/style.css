@@ -121,4 +121,62 @@ header img {
   color: #8b59d5;
 }
 
+.resultats {
+  padding-top: 56px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 64px;
+  background-color: #f6f6f6;
+}
+.resultats .resultats__grille {
+  margin-top: 28px;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 18px;
+  grid-template-areas: "carte1" "carte2" "carte3" "carte4";
+}
+.resultats .resultats__grille .resultats__grille__carte {
+  border-radius: 15px;
+  box-shadow: 0 5px 15px #DDDDDD;
+}
+.resultats .resultats__grille .resultats__grille__carte--1 {
+  grid-area: carte1;
+}
+.resultats .resultats__grille .resultats__grille__carte--2 {
+  grid-area: carte2;
+}
+.resultats .resultats__grille .resultats__grille__carte--3 {
+  grid-area: carte3;
+}
+.resultats .resultats__grille .resultats__grille__carte--4 {
+  grid-area: carte4;
+}
+.resultats .resultats__grille .resultats__grille__carte .resultats__grille__carte__illustration {
+  height: 174px;
+  border-radius: 15px 15px 0 0;
+}
+.resultats .resultats__grille .resultats__grille__carte .resultats__grille__carte__illustration h3 {
+  float: right;
+  padding: 10px 12px;
+  margin-top: 12px;
+  margin-right: 10px;
+  border-radius: 3px;
+  background-color: #a9e0d1;
+}
+.resultats .resultats__grille .resultats__grille__carte .resultats__grille__carte__illustration--1 {
+  background-image: url("../../public/img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.resultats .resultats__grille .resultats__grille__carte .resultats__grille__carte__description {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 14px;
+  border-radius: 0 0 15px 15px;
+  background-color: white;
+}
+.resultats .resultats__grille .resultats__grille__carte .resultats__grille__carte__description p {
+  margin-top: 6px;
+}
+
 /*# sourceMappingURL=style.css.map */
