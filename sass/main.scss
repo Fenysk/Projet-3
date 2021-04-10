@@ -59,3 +59,22 @@ header{
     }
 }
 // Entête
+
+
+.localisation{    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    box-shadow: 0px 10px 15px -15px rgba(0,0,0,0.75) inset;
+
+    background-color: rgb(234,234,234);
+
+    i, p{
+        margin: 16px 0;
+    }
+    i{
+        margin-right: 18px;
+    }
+}
+// Localisation

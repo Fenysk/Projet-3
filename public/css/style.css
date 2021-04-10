@@ -59,4 +59,18 @@ header img {
   height: 22px;
 }
 
+.localisation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 10px 15px -15px rgba(0, 0, 0, 0.75) inset;
+  background-color: #eaeaea;
+}
+.localisation i, .localisation p {
+  margin: 16px 0;
+}
+.localisation i {
+  margin-right: 18px;
+}
+
 /*# sourceMappingURL=style.css.map */
