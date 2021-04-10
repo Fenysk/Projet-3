@@ -20,3 +20,27 @@ table {
 	border-spacing: 0;
 }
 // CSS reset
+
+
+
+h1, h2, h3, h4, h5, h6, p, a, ul, li{
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+h1{
+    font-size: 26px;
+    font-weight: bold;
+}
+h3{
+    font-size: 14px;
+    font-weight: 500px;
+    color: rgb(59, 133, 104);
+}
+a{
+    text-decoration: none;
+}
+span{
+    font-weight: 500;
+}
+// Initialisation texte
