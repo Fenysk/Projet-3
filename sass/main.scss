@@ -44,3 +44,18 @@ span{
     font-weight: 500;
 }
 // Initialisation texte
+
+
+
+header{
+    width: 100%;
+    height: 64px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img{
+        height: 22px;
+    }
+}
+// Entête
