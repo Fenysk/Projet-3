@@ -195,8 +195,24 @@ header img {
 }
 
 footer {
+  padding-top: 26px;
+  padding-left: 24px;
+  padding-bottom: 36px;
   color: white;
   background-color: #353535;
+}
+footer img {
+  height: 18px;
+  filter: invert(100%);
+}
+footer ul {
+  margin-top: 24px;
+}
+footer ul li {
+  margin-top: 14px;
+}
+footer ul li i {
+  margin-right: 8px;
 }
 
 /*# sourceMappingURL=style.css.map */
