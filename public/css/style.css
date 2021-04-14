@@ -43,6 +43,9 @@ h3 {
 a {
   text-decoration: none;
 }
+a {
+  color: black;
+}
 
 span {
   font-weight: 500;
@@ -213,6 +216,9 @@ footer ul li {
 }
 footer ul li i {
   margin-right: 8px;
+}
+footer ul li a {
+  color: white;
 }
 
 /*# sourceMappingURL=style.css.map */

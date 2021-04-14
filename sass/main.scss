@@ -39,6 +39,9 @@ h3{
 }
 a{
     text-decoration: none;
+    &{
+        color: black;
+    }
 }
 span{
     font-weight: 500;
@@ -252,6 +255,11 @@ footer{
             margin-top: 14px;
             i{
                 margin-right: 8px;
+            }
+            a{
+                &{
+                    color: white;
+                }
             }
         }
     }
