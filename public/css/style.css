@@ -190,11 +190,18 @@ header img {
   padding-top: 20px;
   padding-bottom: 20px;
   padding-left: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   border-radius: 0 0 15px 15px;
   background-color: white;
 }
-.resultats .resultats__grille .resultats__grille__carte .resultats__grille__carte__description p {
+.resultats .resultats__grille .resultats__grille__carte .resultats__grille__carte__description .resultats__grille__carte__description__texte p {
   margin-top: 6px;
+}
+.resultats .resultats__grille .resultats__grille__carte .resultats__grille__carte__description .resultats__grille__carte__description__coeur {
+  margin-right: 24px;
+  font-size: 24px;
 }
 
 footer {
