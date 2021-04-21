@@ -59,7 +59,7 @@ header {
   align-items: center;
 }
 header img {
-  height: 22px;
+  height: 28px;
 }
 
 .localisation {
@@ -86,15 +86,6 @@ header img {
 }
 .introduction p {
   margin-top: 24px;
-}
-.introduction .introduction__bouton {
-  margin-top: 34px;
-  padding: 18px 20px;
-  border-radius: 50px;
-  display: inline-block;
-  color: white;
-  background: linear-gradient(180deg, #ff79da, #9356dc);
-  box-shadow: 0 5px 10px #AAAAAA;
 }
 
 .fonctionnement {
@@ -202,6 +193,81 @@ header img {
 .resultats .resultats__grille .resultats__grille__carte .resultats__grille__carte__description .resultats__grille__carte__description__coeur {
   margin-right: 24px;
   font-size: 24px;
+}
+
+.page {
+  background-image: url("../../public/img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+  background-size: cover;
+  background-position: center;
+  border-top: 1px white solid;
+}
+.page .page__carte {
+  margin-top: 220px;
+  padding-top: 40px;
+  padding-left: 20px;
+  padding-right: 40px;
+  padding-bottom: 58px;
+  border-radius: 40px 40px 0 0;
+  background-color: #F6F6F6;
+}
+.page .page__carte h2 {
+  font-size: medium;
+  font-weight: normal;
+  position: relative;
+}
+.page .page__carte h2:before {
+  content: "";
+  width: 40px;
+  height: 3px;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  background-color: #99E2D0;
+}
+.page .page__carte .page__carte__titre {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.page .page__carte .page__carte__titre i {
+  font-size: 24px;
+}
+.page .page__carte .page__carte__plat h2 {
+  margin-top: 48px;
+}
+.page .page__carte .page__carte__plat ul li {
+  margin-top: 14px;
+  padding: 16px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-radius: 15px;
+  box-shadow: 0 5px 10px #DDDDDD;
+  background-color: white;
+}
+.page .page__carte .page__carte__plat ul li .page__carte__plat__description h3 {
+  font-size: medium;
+  color: black;
+}
+.page .page__carte .page__carte__plat ul li .page__carte__plat__description p {
+  font-size: small;
+  margin-top: 8px;
+}
+.page .page__carte .page__carte__bouton {
+  margin-top: 26px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bouton {
+  margin-top: 34px;
+  padding: 18px 30px;
+  border-radius: 50px;
+  display: inline-block;
+  color: white;
+  background: linear-gradient(180deg, #ff79da, #9356dc);
+  box-shadow: 0 5px 10px #AAAAAA;
 }
 
 footer {
