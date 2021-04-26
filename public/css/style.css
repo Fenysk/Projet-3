@@ -74,11 +74,15 @@ header img {
   box-shadow: 0px 10px 15px -15px rgba(0, 0, 0, 0.75) inset;
   background-color: #eaeaea;
 }
-.localisation i, .localisation p {
+.localisation i, .localisation input {
   margin: 16px 0;
 }
-.localisation i {
-  margin-right: 18px;
+.localisation input {
+  border: none;
+  font-size: 16px;
+  text-align: center;
+  color: black;
+  background-color: #eaeaea;
 }
 
 .introduction {
