@@ -60,8 +60,17 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
+
+    position: relative;
     img{
         height: 28px;
+    }
+    a{
+        position: absolute;
+        left: 22px;
+        i{
+        font-size: 20px;
+        }
     }
 }
 // Entête

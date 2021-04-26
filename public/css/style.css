@@ -62,9 +62,17 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 header img {
   height: 28px;
+}
+header a {
+  position: absolute;
+  left: 22px;
+}
+header a i {
+  font-size: 20px;
 }
 
 .localisation {
