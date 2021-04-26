@@ -124,7 +124,7 @@ header{
 .fonctionnement{
     padding-top: 56px;
     padding-bottom: 68px;
-    padding-left: 20px;
+    padding-left: 35px;
     padding-right: 20px;
     li{
         height: 72px;
@@ -134,6 +134,8 @@ header{
         display: flex;
         align-items: center;
 
+        position: relative;
+
         border-radius: 15px;
 
         background-color: rgb(246,246,246);
@@ -141,6 +143,19 @@ header{
         i{
             color: rgb(127, 127, 127);
             margin-right: 26px;
+        }
+        .fonctionnement__numérotation{
+            padding: 4px 9px;
+
+            position: absolute;
+            left: -15px;
+
+            text-align: center;
+            
+            border-radius: 100px;
+
+            color: white;
+            background-color: rgb(139,89,213);
         }
         &:hover{
             background-color: rgb(244,237,254);
