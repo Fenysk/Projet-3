@@ -160,7 +160,7 @@ header a i {
   grid-gap: 18px;
   grid-template-areas: "carte1" "carte2" "carte3" "carte4";
 }
-.resultats .resultats__grille .resultats__grille__carte {
+.resultats .resultats__grille li {
   border-radius: 15px;
   box-shadow: 0 5px 10px #DDDDDD;
 }
