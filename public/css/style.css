@@ -92,6 +92,10 @@ header a i {
   color: black;
   background-color: #eaeaea;
 }
+.localisation input::placeholder {
+  color: black;
+  opacity: 1;
+}
 
 .introduction {
   text-align: center;

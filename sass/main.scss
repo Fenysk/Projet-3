@@ -108,6 +108,10 @@ header{
         text-align: center;
         color: black;
         background-color: rgb(234,234,234);
+        &::placeholder {
+            color: black;
+            opacity: 1;
+          }
     }
 }
 // Localisation
@@ -197,6 +201,10 @@ header{
             "carte3"
             "carte4"
         ;
+
+        li{
+            box-shadow: 0 5px 10px $couleur-ombres;
+        }
 
         .resultats__grille__carte{
             border-radius: 15px;
