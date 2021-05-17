@@ -352,7 +352,7 @@ header{
                 margin-top: 48px;
             }
             ul{
-                li{
+                a{
                     margin-top: 14px;
 
                     display: flex;
@@ -500,3 +500,11 @@ footer{
         }
     }
 }
+
+/*
+.fa-heart{
+    transition: all 500ms;
+    &:hover{
+        transform: scale(2,0.7);
+    }
+}*/

@@ -284,7 +284,7 @@ header a i {
 .page .page__carte .page__carte__plat h2 {
   margin-top: 48px;
 }
-.page .page__carte .page__carte__plat ul li {
+.page .page__carte .page__carte__plat ul a {
   margin-top: 14px;
   display: flex;
   justify-content: space-between;
@@ -293,7 +293,7 @@ header a i {
   box-shadow: 0 5px 10px #DDDDDD;
   background-color: white;
 }
-.page .page__carte .page__carte__plat ul li .page__carte__plat__description {
+.page .page__carte .page__carte__plat ul a .page__carte__plat__description {
   width: 100%;
   padding-top: 16px;
   padding-bottom: 16px;
@@ -303,12 +303,12 @@ header a i {
   justify-content: space-between;
   align-items: flex-end;
 }
-.page .page__carte .page__carte__plat ul li .page__carte__plat__description .page__carte__plat__description__texte h3 {
+.page .page__carte .page__carte__plat ul a .page__carte__plat__description .page__carte__plat__description__texte h3 {
   font-size: medium;
   color: black;
   overflow: hidden;
 }
-.page .page__carte .page__carte__plat ul li .page__carte__plat__description .page__carte__plat__description__texte p {
+.page .page__carte .page__carte__plat ul a .page__carte__plat__description .page__carte__plat__description__texte p {
   font-size: small;
   margin-top: 8px;
   overflow: hidden;
@@ -380,5 +380,13 @@ footer ul li a {
 .page .page__carte .page__carte__plat ul a:hover .page__carte__plat__checkbox i {
   transform: rotate(0deg);
 }
+
+/*
+.fa-heart{
+    transition: all 500ms;
+    &:hover{
+        transform: scale(2,0.7);
+    }
+}*/
 
 /*# sourceMappingURL=style.css.map */
