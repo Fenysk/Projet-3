@@ -244,6 +244,9 @@ header a i {
   background-image: url("../../public/img/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
 }
 .page .page__carte {
+  display: block;
+  margin: auto;
+  max-width: 800px;
   margin-top: 220px;
   padding-top: 40px;
   padding-left: 20px;
@@ -272,11 +275,17 @@ header a i {
 }
 .page .page__carte .page__carte__titre {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  position: relative;
 }
-.page .page__carte .page__carte__titre i {
+.page .page__carte .page__carte__titre .page__carte__titre__coeurs .fa-heart {
+  position: absolute;
+  right: 20px;
   font-size: 24px;
+}
+.page .page__carte .page__carte__titre .page__carte__titre__coeurs .fa-heart--plein {
+  background: -webkit-linear-gradient(#FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .page .page__carte .page__carte__plat {
   max-width: 400px;
@@ -382,12 +391,24 @@ footer ul li a {
   transition: all 0.35s 0.1s linear;
 }
 
-/*
-.fa-heart{
-    transition: all 500ms;
-    &:hover{
-        transform: scale(2,0.7);
-    }
-}*/
+.page__carte__titre__coeurs .fa-heart {
+  transition: all 500ms;
+}
+.page__carte__titre__coeurs .fa-heart--plein {
+  opacity: 0;
+}
+.page__carte__titre__coeurs .fa-heart--vide {
+  opacity: 1;
+}
+.page__carte__titre__coeurs:hover .fa-heart {
+  transform: scale(1.5);
+  transition: all 500ms;
+}
+.page__carte__titre__coeurs:hover .fa-heart--plein {
+  opacity: 1;
+}
+.page__carte__titre__coeurs:hover .fa-heart--vide {
+  opacity: 0;
+}
 
 /*# sourceMappingURL=style.css.map */
