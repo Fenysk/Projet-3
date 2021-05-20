@@ -478,12 +478,12 @@ footer{
 
                             font-size: 14px;
 
-                            transform: rotate(-290deg);
+                            transform: rotate(0deg);
 
                             color: $couleur-tertiaire;
                             background-color: white;
                             
-                            transition: all 0.3s 0.1s linear;
+                            transition: all 0s linear;
                         }
                     }
                     
@@ -491,7 +491,8 @@ footer{
                             .page__carte__plat__checkbox{
                             width: 84px;
                             i{
-                                transform: rotate(0deg);
+                                transform: rotate(360deg);
+                                transition: all 0.35s 0.1s linear;
                             }
                         }
                     }
