@@ -347,8 +347,14 @@ header{
             display: flex;
             position: relative;
             .page__carte__titre__coeurs{
+                margin: 0;
+                padding: 0;
+                border: 0;
+                background: none;
+
                 .fa-heart{
                     position: absolute;
+                    top: 0;
                     right: 20px;
                     font-size: 24px;
                     &--plein{
@@ -361,10 +367,25 @@ header{
         }
         .page__carte__plat{
             max-width: 400px;
-            h2{
-                margin-top: 48px;
-            }
-            ul{
+            .page__carte__plat__type{
+                h2{
+                    margin-top: 48px;
+                }
+
+                //animation
+                animation: translation 1s backwards;
+                &--1{
+                    animation-delay: 300ms;
+                }
+                &--2{
+                    animation-delay: 600ms;
+                }
+                &--3{
+                    animation-delay: 900ms;
+                }
+                //animation
+
+
                 a{
                     margin-top: 14px;
 
@@ -514,11 +535,13 @@ footer{
         }
     }
 }
+// checkbox
 
 .page__carte__titre__coeurs{
     .fa-heart{
         transition: all 500ms;
         &--plein{
+            transform: scale(0.8);
             opacity: 0;
         }
         &--vide{
@@ -528,7 +551,7 @@ footer{
 
     &:hover{
         .fa-heart{
-            transform: scale(1.5);
+            transform: scale(1.4);
             transition: all 500ms;
             &--plein{
                 opacity: 1;
@@ -539,3 +562,18 @@ footer{
         }
     }
 }
+// Coeurs
+
+
+@keyframes translation{
+    0% {
+        opacity: 0;
+        transform: translate(0,30px);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translate(0,0px);
+    }
+}
+// Apparitions des plats

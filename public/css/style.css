@@ -277,8 +277,15 @@ header a i {
   display: flex;
   position: relative;
 }
+.page .page__carte .page__carte__titre .page__carte__titre__coeurs {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+}
 .page .page__carte .page__carte__titre .page__carte__titre__coeurs .fa-heart {
   position: absolute;
+  top: 0;
   right: 20px;
   font-size: 24px;
 }
@@ -290,10 +297,22 @@ header a i {
 .page .page__carte .page__carte__plat {
   max-width: 400px;
 }
-.page .page__carte .page__carte__plat h2 {
+.page .page__carte .page__carte__plat .page__carte__plat__type {
+  animation: translation 1s backwards;
+}
+.page .page__carte .page__carte__plat .page__carte__plat__type h2 {
   margin-top: 48px;
 }
-.page .page__carte .page__carte__plat ul a {
+.page .page__carte .page__carte__plat .page__carte__plat__type--1 {
+  animation-delay: 300ms;
+}
+.page .page__carte .page__carte__plat .page__carte__plat__type--2 {
+  animation-delay: 600ms;
+}
+.page .page__carte .page__carte__plat .page__carte__plat__type--3 {
+  animation-delay: 900ms;
+}
+.page .page__carte .page__carte__plat .page__carte__plat__type a {
   margin-top: 14px;
   display: flex;
   justify-content: space-between;
@@ -302,7 +321,7 @@ header a i {
   box-shadow: 0 5px 10px #DDDDDD;
   background-color: white;
 }
-.page .page__carte .page__carte__plat ul a .page__carte__plat__description {
+.page .page__carte .page__carte__plat .page__carte__plat__type a .page__carte__plat__description {
   width: 100%;
   padding-top: 16px;
   padding-bottom: 16px;
@@ -312,12 +331,12 @@ header a i {
   justify-content: space-between;
   align-items: flex-end;
 }
-.page .page__carte .page__carte__plat ul a .page__carte__plat__description .page__carte__plat__description__texte h3 {
+.page .page__carte .page__carte__plat .page__carte__plat__type a .page__carte__plat__description .page__carte__plat__description__texte h3 {
   font-size: medium;
   color: black;
   overflow: hidden;
 }
-.page .page__carte .page__carte__plat ul a .page__carte__plat__description .page__carte__plat__description__texte p {
+.page .page__carte .page__carte__plat .page__carte__plat__type a .page__carte__plat__description .page__carte__plat__description__texte p {
   font-size: small;
   margin-top: 8px;
   overflow: hidden;
@@ -395,13 +414,14 @@ footer ul li a {
   transition: all 500ms;
 }
 .page__carte__titre__coeurs .fa-heart--plein {
+  transform: scale(0.8);
   opacity: 0;
 }
 .page__carte__titre__coeurs .fa-heart--vide {
   opacity: 1;
 }
 .page__carte__titre__coeurs:hover .fa-heart {
-  transform: scale(1.5);
+  transform: scale(1.4);
   transition: all 500ms;
 }
 .page__carte__titre__coeurs:hover .fa-heart--plein {
@@ -409,6 +429,17 @@ footer ul li a {
 }
 .page__carte__titre__coeurs:hover .fa-heart--vide {
   opacity: 0;
+}
+
+@keyframes translation {
+  0% {
+    opacity: 0;
+    transform: translate(0, 30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0px);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
