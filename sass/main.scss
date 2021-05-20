@@ -306,10 +306,15 @@ header{
     border-top: 1px white solid;
 
     .page__carte{
+        display: block;
+        margin: auto;
+
+        max-width: 800px;
+
         margin-top: 220px;
         padding-top: 40px;
         padding-left: 20px;
-        padding-right: 40px;
+        padding-right: 20px;
         padding-bottom: 58px;
 
         border-radius: 40px 40px 0 0;
@@ -340,38 +345,82 @@ header{
         
         .page__carte__titre{
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            i{
-                font-size: 24px;
+            position: relative;
+            .page__carte__titre__coeurs{
+                margin: 0;
+                padding: 0;
+                border: 0;
+                background: none;
+
+                .fa-heart{
+                    position: absolute;
+                    top: 0;
+                    right: 20px;
+                    font-size: 24px;
+                    &--plein{
+                        background: -webkit-linear-gradient($couleur-secondaire, $couleur-primaire);
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                    }
+                }
             }
         }
         .page__carte__plat{
-            h2{
-                margin-top: 48px;
-            }
-            ul{
-                li{
+            max-width: 400px;
+            .page__carte__plat__type{
+                h2{
+                    margin-top: 48px;
+                }
+
+                //animation
+                animation: translation 1s backwards;
+                &--1{
+                    animation-delay: 300ms;
+                }
+                &--2{
+                    animation-delay: 600ms;
+                }
+                &--3{
+                    animation-delay: 900ms;
+                }
+                //animation
+
+
+                a{
                     margin-top: 14px;
-                    padding: 16px 10px;
 
                     display: flex;
                     justify-content: space-between;
-                    align-items: flex-end;
+                    align-items: center;
 
                     border-radius: 15px;
                     box-shadow: 0 5px 10px $couleur-ombres;
                     background-color: white;
+
                     .page__carte__plat__description{
-                        h3{
-                            font-size: medium;
-                            color: black;
+                        width: 100%;
+                        padding-top: 16px;
+                        padding-bottom: 16px;
+                        padding-left: 10px;
+                        padding-right: 20px;
+
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: flex-end;
+
+                        .page__carte__plat__description__texte{
+                            h3{
+                                font-size: medium;
+                                color: black;
+                                overflow: hidden;
+                            }
+                            p{
+                                font-size: small;
+                                margin-top: 8px;
+                                overflow: hidden;
+                            }
                         }
-                        p{
-                            font-size: small;
-                            margin-top: 8px;
-                        }
-                    }
+                    }            
                 }
             }
         }
@@ -437,3 +486,94 @@ footer{
  // ===== Animations ===== //
 //======================= //
 
+.page{
+    .page__carte{
+        .page__carte__plat{
+            ul{
+                a{    
+                    .page__carte__plat__checkbox{
+                        width: 0;
+                        
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        overflow: hidden;
+
+                        border-radius: 0 15px 15px 0;
+                        
+                        background-color: $couleur-tertiaire;
+
+                        transition: all 0.5s ease-out;
+                        i{
+                            padding: 5px;
+                            margin: 25px 30px;
+                            border-radius: 25px;
+
+                            font-size: 14px;
+
+                            transform: rotate(0deg);
+
+                            color: $couleur-tertiaire;
+                            background-color: white;
+                            
+                            transition: all 0s linear;
+                        }
+                    }
+                    
+                    &:hover{
+                            .page__carte__plat__checkbox{
+                            width: 84px;
+                            i{
+                                transform: rotate(360deg);
+                                transition: all 0.35s 0.1s linear;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// checkbox
+
+.page__carte__titre__coeurs{
+    .fa-heart{
+        transition: all 500ms;
+        &--plein{
+            transform: scale(0.8);
+            opacity: 0;
+        }
+        &--vide{
+            opacity: 1;
+        }
+    }
+
+    &:hover{
+        .fa-heart{
+            transform: scale(1.4);
+            transition: all 500ms;
+            &--plein{
+                opacity: 1;
+            }
+            &--vide{
+                opacity: 0;
+            }
+        }
+    }
+}
+// Coeurs
+
+
+@keyframes translation{
+    0% {
+        opacity: 0;
+        transform: translate(0,30px);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translate(0,0px);
+    }
+}
+// Apparitions des plats
