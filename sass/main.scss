@@ -409,16 +409,19 @@ header{
                         align-items: flex-end;
 
                         .page__carte__plat__description__texte{
+                            
                             h3{
                                 font-size: medium;
                                 color: black;
-                                overflow: hidden;
                             }
                             p{
                                 font-size: small;
                                 margin-top: 8px;
-                                overflow: hidden;
                             }
+                        }
+
+                        .page__carte__plat__description__prix{
+                            
                         }
                     }            
                 }
@@ -539,6 +542,7 @@ footer{
 
 .page__carte__titre__coeurs{
     .fa-heart{
+        cursor: pointer;
         transition: all 500ms;
         &--plein{
             transform: scale(0.8);
@@ -549,7 +553,7 @@ footer{
         }
     }
 
-    &:hover{
+    &:focus{
         .fa-heart{
             transform: scale(1.4);
             transition: all 500ms;

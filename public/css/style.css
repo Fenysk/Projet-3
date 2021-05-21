@@ -334,12 +334,10 @@ header a i {
 .page .page__carte .page__carte__plat .page__carte__plat__type a .page__carte__plat__description .page__carte__plat__description__texte h3 {
   font-size: medium;
   color: black;
-  overflow: hidden;
 }
 .page .page__carte .page__carte__plat .page__carte__plat__type a .page__carte__plat__description .page__carte__plat__description__texte p {
   font-size: small;
   margin-top: 8px;
-  overflow: hidden;
 }
 .page .page__carte .page__carte__bouton {
   margin-top: 26px;
@@ -411,6 +409,7 @@ footer ul li a {
 }
 
 .page__carte__titre__coeurs .fa-heart {
+  cursor: pointer;
   transition: all 500ms;
 }
 .page__carte__titre__coeurs .fa-heart--plein {
@@ -420,14 +419,14 @@ footer ul li a {
 .page__carte__titre__coeurs .fa-heart--vide {
   opacity: 1;
 }
-.page__carte__titre__coeurs:hover .fa-heart {
+.page__carte__titre__coeurs:focus .fa-heart {
   transform: scale(1.4);
   transition: all 500ms;
 }
-.page__carte__titre__coeurs:hover .fa-heart--plein {
+.page__carte__titre__coeurs:focus .fa-heart--plein {
   opacity: 1;
 }
-.page__carte__titre__coeurs:hover .fa-heart--vide {
+.page__carte__titre__coeurs:focus .fa-heart--vide {
   opacity: 0;
 }
 
