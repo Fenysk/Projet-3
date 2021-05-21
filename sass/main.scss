@@ -289,29 +289,22 @@ header{
  // ===== Les différentes cartes ===== //
 // ================================== //
 .page{
-    &--La-Palette-Du-Goût{
-        background-image: url("../../public/img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
-    }
-    &--La-note-enchantée{
-        background-image: url("../../public/img/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
-    }
-    &--A-La-Francaise{
-        background-image: url("../../public/img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
-    }
-    &--Le-Delice-Des-Sens{
-        background-image: url("../../public/img/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
-    }
+    background-image: none;
     background-size: cover;
     background-position: center;
     border-top: 1px white solid;
+
+    img{
+        height: 220px;
+        width: 100%;
+        object-fit: cover;
+    }
 
     .page__carte{
         display: block;
         margin: auto;
 
-        max-width: 800px;
-
-        margin-top: 220px;
+        margin-top: 0;
         padding-top: 40px;
         padding-left: 20px;
         padding-right: 20px;
@@ -344,7 +337,6 @@ header{
         }
         
         .page__carte__titre{
-            display: flex;
             position: relative;
             .page__carte__titre__coeurs{
                 margin: 0;
@@ -354,7 +346,7 @@ header{
 
                 .fa-heart{
                     position: absolute;
-                    top: 0;
+                    top: 5px;
                     right: 20px;
                     font-size: 24px;
                     &--plein{
@@ -366,11 +358,13 @@ header{
             }
         }
         .page__carte__plat{
-            max-width: 400px;
+            
+            h2{
+                margin-top: 48px;
+            }
+
             .page__carte__plat__type{
-                h2{
-                    margin-top: 48px;
-                }
+                
 
                 //animation
                 animation: translation 1s backwards;
@@ -386,8 +380,11 @@ header{
                 //animation
 
 
-                a{
+                li{
                     margin-top: 14px;
+                    width: 100%;
+
+                    cursor: pointer;
 
                     display: flex;
                     justify-content: space-between;
@@ -493,7 +490,7 @@ footer{
     .page__carte{
         .page__carte__plat{
             ul{
-                a{    
+                li{    
                     .page__carte__plat__checkbox{
                         width: 0;
                         
@@ -581,3 +578,111 @@ footer{
     }
 }
 // Apparitions des plats
+
+
+
+
+
+  // ====================== //
+ // ===== Responsive ===== //
+//======================= //
+
+@media all and (min-width: 812px)
+{
+    header{
+        height: 100px;
+        a{
+            left: 70px;
+            i{
+            font-size: 30px;
+            }
+        }
+    }
+
+    .page{
+        &--La-Palette-Du-Goût{
+            background-image: url("../../public/img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+        }
+        &--La-note-enchantée{
+            background-image: url("../../public/img/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
+        }
+        &--A-La-Francaise{
+            background-image: url("../../public/img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+        }
+        &--Le-Delice-Des-Sens{
+            background-image: url("../../public/img/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
+        }
+
+        img{
+            display: none;
+        }
+
+        .page__carte{
+            margin-top: 220px;
+            max-width: 60%;
+            min-width: 730px;
+            padding: 60px 5%;
+
+            .page__carte__titre{
+                h1{
+                    text-align: center;
+                }
+                .page__carte__titre__coeurs{
+                    .fa-heart{
+                        right: 25%;
+                    }
+                }
+            }
+    
+            .page__carte__plat{
+                .page__carte__plat__type{
+                    width: 90%;
+                    margin:auto;
+                    margin-top: 20px;
+    
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    grid-gap: 30px;
+                    
+    
+                    h2{
+                        width: 100%;
+                    }
+                    
+                    li{
+                        margin-top: 0;
+                        width: auto;
+                        max-height: 74px;
+                    }
+                } 
+            }
+        }
+    }
+
+    .bouton{
+        margin-top: 50px;
+        width: 30%;
+        text-align: center;
+    }
+
+    footer{
+        padding-top: 40px;
+        padding: 40px 20%;
+        
+        color: white;
+        background-color: $couleur-footer;
+    
+        img{
+            height: 18px;
+            filter: invert(100%);
+        }
+        ul{
+            margin-top: 24px;
+            display: flex;
+            li{
+                margin-top: 10px;
+                margin-right: 5%;
+            }
+        }
+    }
+}

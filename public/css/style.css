@@ -227,27 +227,20 @@ header a i {
 }
 
 .page {
+  background-image: none;
   background-size: cover;
   background-position: center;
   border-top: 1px white solid;
 }
-.page--La-Palette-Du-Goût {
-  background-image: url("../../public/img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
-}
-.page--La-note-enchantée {
-  background-image: url("../../public/img/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
-}
-.page--A-La-Francaise {
-  background-image: url("../../public/img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
-}
-.page--Le-Delice-Des-Sens {
-  background-image: url("../../public/img/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
+.page img {
+  height: 220px;
+  width: 100%;
+  object-fit: cover;
 }
 .page .page__carte {
   display: block;
   margin: auto;
-  max-width: 800px;
-  margin-top: 220px;
+  margin-top: 0;
   padding-top: 40px;
   padding-left: 20px;
   padding-right: 20px;
@@ -274,7 +267,6 @@ header a i {
   background-color: #99E2D0;
 }
 .page .page__carte .page__carte__titre {
-  display: flex;
   position: relative;
 }
 .page .page__carte .page__carte__titre .page__carte__titre__coeurs {
@@ -285,7 +277,7 @@ header a i {
 }
 .page .page__carte .page__carte__titre .page__carte__titre__coeurs .fa-heart {
   position: absolute;
-  top: 0;
+  top: 5px;
   right: 20px;
   font-size: 24px;
 }
@@ -294,14 +286,11 @@ header a i {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.page .page__carte .page__carte__plat {
-  max-width: 400px;
+.page .page__carte .page__carte__plat h2 {
+  margin-top: 48px;
 }
 .page .page__carte .page__carte__plat .page__carte__plat__type {
   animation: translation 1s backwards;
-}
-.page .page__carte .page__carte__plat .page__carte__plat__type h2 {
-  margin-top: 48px;
 }
 .page .page__carte .page__carte__plat .page__carte__plat__type--1 {
   animation-delay: 300ms;
@@ -312,8 +301,10 @@ header a i {
 .page .page__carte .page__carte__plat .page__carte__plat__type--3 {
   animation-delay: 900ms;
 }
-.page .page__carte .page__carte__plat .page__carte__plat__type a {
+.page .page__carte .page__carte__plat .page__carte__plat__type li {
   margin-top: 14px;
+  width: 100%;
+  cursor: pointer;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -321,7 +312,7 @@ header a i {
   box-shadow: 0 5px 10px #DDDDDD;
   background-color: white;
 }
-.page .page__carte .page__carte__plat .page__carte__plat__type a .page__carte__plat__description {
+.page .page__carte .page__carte__plat .page__carte__plat__type li .page__carte__plat__description {
   width: 100%;
   padding-top: 16px;
   padding-bottom: 16px;
@@ -331,11 +322,11 @@ header a i {
   justify-content: space-between;
   align-items: flex-end;
 }
-.page .page__carte .page__carte__plat .page__carte__plat__type a .page__carte__plat__description .page__carte__plat__description__texte h3 {
+.page .page__carte .page__carte__plat .page__carte__plat__type li .page__carte__plat__description .page__carte__plat__description__texte h3 {
   font-size: medium;
   color: black;
 }
-.page .page__carte .page__carte__plat .page__carte__plat__type a .page__carte__plat__description .page__carte__plat__description__texte p {
+.page .page__carte .page__carte__plat .page__carte__plat__type li .page__carte__plat__description .page__carte__plat__description__texte p {
   font-size: small;
   margin-top: 8px;
 }
@@ -380,7 +371,7 @@ footer ul li a {
   color: white;
 }
 
-.page .page__carte .page__carte__plat ul a .page__carte__plat__checkbox {
+.page .page__carte .page__carte__plat ul li .page__carte__plat__checkbox {
   width: 0;
   display: flex;
   justify-content: center;
@@ -390,7 +381,7 @@ footer ul li a {
   background-color: #99E2D0;
   transition: all 0.5s ease-out;
 }
-.page .page__carte .page__carte__plat ul a .page__carte__plat__checkbox i {
+.page .page__carte .page__carte__plat ul li .page__carte__plat__checkbox i {
   padding: 5px;
   margin: 25px 30px;
   border-radius: 25px;
@@ -400,10 +391,10 @@ footer ul li a {
   background-color: white;
   transition: all 0s linear;
 }
-.page .page__carte .page__carte__plat ul a:hover .page__carte__plat__checkbox {
+.page .page__carte .page__carte__plat ul li:hover .page__carte__plat__checkbox {
   width: 84px;
 }
-.page .page__carte .page__carte__plat ul a:hover .page__carte__plat__checkbox i {
+.page .page__carte .page__carte__plat ul li:hover .page__carte__plat__checkbox i {
   transform: rotate(360deg);
   transition: all 0.35s 0.1s linear;
 }
@@ -438,6 +429,86 @@ footer ul li a {
   100% {
     opacity: 1;
     transform: translate(0, 0px);
+  }
+}
+@media all and (min-width: 812px) {
+  header {
+    height: 100px;
+  }
+  header a {
+    left: 70px;
+  }
+  header a i {
+    font-size: 30px;
+  }
+
+  .page--La-Palette-Du-Goût {
+    background-image: url("../../public/img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+  }
+  .page--La-note-enchantée {
+    background-image: url("../../public/img/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
+  }
+  .page--A-La-Francaise {
+    background-image: url("../../public/img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+  }
+  .page--Le-Delice-Des-Sens {
+    background-image: url("../../public/img/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
+  }
+  .page img {
+    display: none;
+  }
+  .page .page__carte {
+    margin-top: 220px;
+    max-width: 60%;
+    min-width: 730px;
+    padding: 60px 5%;
+  }
+  .page .page__carte .page__carte__titre h1 {
+    text-align: center;
+  }
+  .page .page__carte .page__carte__titre .page__carte__titre__coeurs .fa-heart {
+    right: 25%;
+  }
+  .page .page__carte .page__carte__plat .page__carte__plat__type {
+    width: 90%;
+    margin: auto;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+  }
+  .page .page__carte .page__carte__plat .page__carte__plat__type h2 {
+    width: 100%;
+  }
+  .page .page__carte .page__carte__plat .page__carte__plat__type li {
+    margin-top: 0;
+    width: auto;
+    max-height: 74px;
+  }
+
+  .bouton {
+    margin-top: 50px;
+    width: 30%;
+    text-align: center;
+  }
+
+  footer {
+    padding-top: 40px;
+    padding: 40px 20%;
+    color: white;
+    background-color: #353535;
+  }
+  footer img {
+    height: 18px;
+    filter: invert(100%);
+  }
+  footer ul {
+    margin-top: 24px;
+    display: flex;
+  }
+  footer ul li {
+    margin-top: 10px;
+    margin-right: 5%;
   }
 }
 
