@@ -5,6 +5,7 @@ $couleur-tertiaire: #99E2D0;
 $couleur-tertiaire-texte: rgb(59, 133, 104);
 $couleur-footer: rgb(53, 53, 53);
 $couleur-ombres: #DDDDDD;
+$couleur-ombres-foncee: #BBBBBB;
 
 
 html, body{
@@ -137,12 +138,13 @@ header{
 .fonctionnement{
     padding-top: 56px;
     padding-bottom: 68px;
-    padding-left: 35px;
+    padding-left: 20px;
     padding-right: 20px;
     li{
         height: 72px;
         margin-top: 32px;
         padding-left: 32px;
+        padding-right: 28px;
 
         display: flex;
         align-items: center;
@@ -256,6 +258,7 @@ header{
                     }
                 }
             }
+
             .resultats__grille__carte__description{
                 padding-top: 20px;
                 padding-bottom: 20px;
@@ -268,14 +271,32 @@ header{
                 border-radius: 0 0 15px 15px;
 
                 background-color: white;
+
+                position: relative;
+
+                .element__coeurs{
+                    margin: 0;
+                    padding: 0;
+                    border: 0;
+                    background: none;
+    
+                    .fa-heart{
+                        position: absolute;
+                        top: 30px;
+                        right: 24px;
+                        font-size: 28px;
+                        &--plein{
+                            background: -webkit-linear-gradient($couleur-secondaire, $couleur-primaire);
+                            -webkit-background-clip: text;
+                            -webkit-text-fill-color: transparent;
+                        }
+                    }
+                }
+
                 .resultats__grille__carte__description__texte{
                     p{
                         margin-top: 6px;
                     }
-                }
-                .resultats__grille__carte__description__coeur{
-                    margin-right: 24px;
-                    font-size: 24px;
                 }
             }
         }
@@ -537,7 +558,7 @@ footer{
 }
 // checkbox
 
-.page__carte__titre__coeurs{
+.page__carte__titre__coeurs, .element__coeurs{
     .fa-heart{
         cursor: pointer;
         transition: all 500ms;
@@ -550,7 +571,7 @@ footer{
         }
     }
 
-    &:focus{
+    &:focus, &:hover{
         .fa-heart{
             transform: scale(1.4);
             transition: all 500ms;
@@ -579,6 +600,14 @@ footer{
 }
 // Apparitions des plats
 
+.bouton{
+    transition: all 500ms ease;
+    &:hover{
+        box-shadow: 4px 9px 10px $couleur-ombres-foncee;
+        transform: scale(1.1);
+    }
+}
+
 
 
 
@@ -597,6 +626,24 @@ footer{
             font-size: 30px;
             }
         }
+    }
+
+    .fonctionnement{
+        padding-left: 15%;
+        padding-right: 15%;
+        ul{
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-around;
+            li{
+                margin: 16px;
+            }
+        }
+    }
+
+    .resultats{
+        padding-left: 15%;
+        padding-right: 15%;
     }
 
     .page{

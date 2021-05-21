@@ -112,13 +112,14 @@ header a i {
 .fonctionnement {
   padding-top: 56px;
   padding-bottom: 68px;
-  padding-left: 35px;
+  padding-left: 20px;
   padding-right: 20px;
 }
 .fonctionnement li {
   height: 72px;
   margin-top: 32px;
   padding-left: 32px;
+  padding-right: 28px;
   display: flex;
   align-items: center;
   position: relative;
@@ -217,13 +218,27 @@ header a i {
   align-items: center;
   border-radius: 0 0 15px 15px;
   background-color: white;
+  position: relative;
+}
+.resultats .resultats__grille .resultats__grille__carte .resultats__grille__carte__description .element__coeurs {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+}
+.resultats .resultats__grille .resultats__grille__carte .resultats__grille__carte__description .element__coeurs .fa-heart {
+  position: absolute;
+  top: 30px;
+  right: 24px;
+  font-size: 28px;
+}
+.resultats .resultats__grille .resultats__grille__carte .resultats__grille__carte__description .element__coeurs .fa-heart--plein {
+  background: -webkit-linear-gradient(#FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .resultats .resultats__grille .resultats__grille__carte .resultats__grille__carte__description .resultats__grille__carte__description__texte p {
   margin-top: 6px;
-}
-.resultats .resultats__grille .resultats__grille__carte .resultats__grille__carte__description .resultats__grille__carte__description__coeur {
-  margin-right: 24px;
-  font-size: 24px;
 }
 
 .page {
@@ -399,25 +414,25 @@ footer ul li a {
   transition: all 0.35s 0.1s linear;
 }
 
-.page__carte__titre__coeurs .fa-heart {
+.page__carte__titre__coeurs .fa-heart, .element__coeurs .fa-heart {
   cursor: pointer;
   transition: all 500ms;
 }
-.page__carte__titre__coeurs .fa-heart--plein {
+.page__carte__titre__coeurs .fa-heart--plein, .element__coeurs .fa-heart--plein {
   transform: scale(0.8);
   opacity: 0;
 }
-.page__carte__titre__coeurs .fa-heart--vide {
+.page__carte__titre__coeurs .fa-heart--vide, .element__coeurs .fa-heart--vide {
   opacity: 1;
 }
-.page__carte__titre__coeurs:focus .fa-heart {
+.page__carte__titre__coeurs:focus .fa-heart, .page__carte__titre__coeurs:hover .fa-heart, .element__coeurs:focus .fa-heart, .element__coeurs:hover .fa-heart {
   transform: scale(1.4);
   transition: all 500ms;
 }
-.page__carte__titre__coeurs:focus .fa-heart--plein {
+.page__carte__titre__coeurs:focus .fa-heart--plein, .page__carte__titre__coeurs:hover .fa-heart--plein, .element__coeurs:focus .fa-heart--plein, .element__coeurs:hover .fa-heart--plein {
   opacity: 1;
 }
-.page__carte__titre__coeurs:focus .fa-heart--vide {
+.page__carte__titre__coeurs:focus .fa-heart--vide, .page__carte__titre__coeurs:hover .fa-heart--vide, .element__coeurs:focus .fa-heart--vide, .element__coeurs:hover .fa-heart--vide {
   opacity: 0;
 }
 
@@ -431,6 +446,14 @@ footer ul li a {
     transform: translate(0, 0px);
   }
 }
+.bouton {
+  transition: all 500ms ease;
+}
+.bouton:hover {
+  box-shadow: 4px 9px 10px #BBBBBB;
+  transform: scale(1.1);
+}
+
 @media all and (min-width: 812px) {
   header {
     height: 100px;
@@ -440,6 +463,24 @@ footer ul li a {
   }
   header a i {
     font-size: 30px;
+  }
+
+  .fonctionnement {
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+  .fonctionnement ul {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+  }
+  .fonctionnement ul li {
+    margin: 16px;
+  }
+
+  .resultats {
+    padding-left: 15%;
+    padding-right: 15%;
   }
 
   .page--La-Palette-Du-Goût {
