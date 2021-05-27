@@ -163,7 +163,9 @@ header a i {
 }
 .resultats .resultats__grille li {
   border-radius: 15px;
-  box-shadow: 0 5px 10px #DDDDDD;
+}
+.resultats .resultats__grille .resultats__grille__carte {
+  position: relative;
 }
 .resultats .resultats__grille .resultats__grille__carte--1 {
   grid-area: carte1;
@@ -177,7 +179,25 @@ header a i {
 .resultats .resultats__grille .resultats__grille__carte--4 {
   grid-area: carte4;
 }
+.resultats .resultats__grille .resultats__grille__carte .element__coeurs {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+}
+.resultats .resultats__grille .resultats__grille__carte .element__coeurs .fa-heart {
+  position: absolute;
+  bottom: 48px;
+  right: 24px;
+  font-size: 28px;
+}
+.resultats .resultats__grille .resultats__grille__carte .element__coeurs .fa-heart--plein {
+  background: -webkit-linear-gradient(#FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 .resultats .resultats__grille .resultats__grille__carte .resultats__grille__carte__illustration {
+  box-shadow: 0 5px 10px #DDDDDD;
   height: 174px;
   background-size: cover;
   background-position: center;
@@ -210,6 +230,7 @@ header a i {
   visibility: hidden;
 }
 .resultats .resultats__grille .resultats__grille__carte .resultats__grille__carte__description {
+  box-shadow: 0 5px 10px #DDDDDD;
   padding-top: 20px;
   padding-bottom: 20px;
   padding-left: 14px;
@@ -218,24 +239,6 @@ header a i {
   align-items: center;
   border-radius: 0 0 15px 15px;
   background-color: white;
-  position: relative;
-}
-.resultats .resultats__grille .resultats__grille__carte .resultats__grille__carte__description .element__coeurs {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  background: none;
-}
-.resultats .resultats__grille .resultats__grille__carte .resultats__grille__carte__description .element__coeurs .fa-heart {
-  position: absolute;
-  top: 30px;
-  right: 24px;
-  font-size: 28px;
-}
-.resultats .resultats__grille .resultats__grille__carte .resultats__grille__carte__description .element__coeurs .fa-heart--plein {
-  background: -webkit-linear-gradient(#FF79DA, #9356DC);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 .resultats .resultats__grille .resultats__grille__carte .resultats__grille__carte__description .resultats__grille__carte__description__texte p {
   margin-top: 6px;

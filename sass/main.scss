@@ -206,10 +206,10 @@ header{
 
         li{
             border-radius: 15px;
-            box-shadow: 0 5px 10px $couleur-ombres;
         }
 
         .resultats__grille__carte{
+
             &--1{
                 grid-area: carte1;
             }
@@ -222,7 +222,30 @@ header{
             &--4{
                 grid-area: carte4;
             }
+
+            position: relative;
+
+            .element__coeurs{
+                margin: 0;
+                padding: 0;
+                border: 0;
+                background: none;
+
+                .fa-heart{
+                    position: absolute;
+                    bottom: 48px;
+                    right: 24px;
+                    font-size: 28px;
+                    &--plein{
+                        background: -webkit-linear-gradient($couleur-secondaire, $couleur-primaire);
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                    }
+                }
+            }
+
             .resultats__grille__carte__illustration{
+                box-shadow: 0 5px 10px $couleur-ombres;
                 height: 174px;
 
                 background-size: cover;
@@ -260,6 +283,8 @@ header{
             }
 
             .resultats__grille__carte__description{
+                box-shadow: 0 5px 10px $couleur-ombres;
+
                 padding-top: 20px;
                 padding-bottom: 20px;
                 padding-left: 14px;
@@ -271,27 +296,6 @@ header{
                 border-radius: 0 0 15px 15px;
 
                 background-color: white;
-
-                position: relative;
-
-                .element__coeurs{
-                    margin: 0;
-                    padding: 0;
-                    border: 0;
-                    background: none;
-    
-                    .fa-heart{
-                        position: absolute;
-                        top: 30px;
-                        right: 24px;
-                        font-size: 28px;
-                        &--plein{
-                            background: -webkit-linear-gradient($couleur-secondaire, $couleur-primaire);
-                            -webkit-background-clip: text;
-                            -webkit-text-fill-color: transparent;
-                        }
-                    }
-                }
 
                 .resultats__grille__carte__description__texte{
                     p{
