@@ -433,6 +433,7 @@ header{
                         align-items: flex-end;
 
                         .page__carte__plat__description__texte{
+                            overflow: hidden;
                             
                             h3{
                                 font-size: medium;
@@ -445,7 +446,6 @@ header{
                         }
 
                         .page__carte__plat__description__prix{
-                            
                         }
                     }            
                 }

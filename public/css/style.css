@@ -341,6 +341,9 @@ header a i {
   justify-content: space-between;
   align-items: flex-end;
 }
+.page .page__carte .page__carte__plat .page__carte__plat__type li .page__carte__plat__description .page__carte__plat__description__texte {
+  overflow: hidden;
+}
 .page .page__carte .page__carte__plat .page__carte__plat__type li .page__carte__plat__description .page__carte__plat__description__texte h3 {
   font-size: medium;
   color: black;
