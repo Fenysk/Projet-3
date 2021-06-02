@@ -320,37 +320,8 @@ header a i {
 .page .page__carte .page__carte__plat .page__carte__plat__type--3 {
   animation-delay: 900ms;
 }
-.page .page__carte .page__carte__plat .page__carte__plat__type li {
-  margin-top: 14px;
-  width: 100%;
-  cursor: pointer;
+.page .page__carte .page__carte__plat .page__carte__plat__type .contenu {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-radius: 15px;
-  box-shadow: 0 5px 10px #DDDDDD;
-  background-color: white;
-}
-.page .page__carte .page__carte__plat .page__carte__plat__type li .page__carte__plat__description {
-  width: 100%;
-  padding-top: 16px;
-  padding-bottom: 16px;
-  padding-left: 10px;
-  padding-right: 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-}
-.page .page__carte .page__carte__plat .page__carte__plat__type li .page__carte__plat__description .page__carte__plat__description__texte {
-  overflow: hidden;
-}
-.page .page__carte .page__carte__plat .page__carte__plat__type li .page__carte__plat__description .page__carte__plat__description__texte h3 {
-  font-size: medium;
-  color: black;
-}
-.page .page__carte .page__carte__plat .page__carte__plat__type li .page__carte__plat__description .page__carte__plat__description__texte p {
-  font-size: small;
-  margin-top: 8px;
 }
 .page .page__carte .page__carte__bouton {
   margin-top: 26px;

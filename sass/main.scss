@@ -407,47 +407,9 @@ header{
                 //animation
 
 
-                li{
-                    margin-top: 14px;
-                    width: 100%;
-
-                    cursor: pointer;
-
+                .contenu{
                     display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-
-                    border-radius: 15px;
-                    box-shadow: 0 5px 10px $couleur-ombres;
-                    background-color: white;
-
-                    .page__carte__plat__description{
-                        width: 100%;
-                        padding-top: 16px;
-                        padding-bottom: 16px;
-                        padding-left: 10px;
-                        padding-right: 20px;
-
-                        display: flex;
-                        justify-content: space-between;
-                        align-items: flex-end;
-
-                        .page__carte__plat__description__texte{
-                            overflow: hidden;
-                            
-                            h3{
-                                font-size: medium;
-                                color: black;
-                            }
-                            p{
-                                font-size: small;
-                                margin-top: 8px;
-                            }
-                        }
-
-                        .page__carte__plat__description__prix{
-                        }
-                    }            
+                    
                 }
             }
         }
