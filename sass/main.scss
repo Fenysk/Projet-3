@@ -33,7 +33,7 @@ table {
 
 
 
-h1, h2, h3, h4, h5, h6, p, a, ul, li{
+h1, h2, h3, h4, h5, h6, p, a, ul, li, span{
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
@@ -60,6 +60,82 @@ span{
     font-weight: 500;
 }
 // Initialisation texte
+
+
+.chargement {
+    position: fixed;
+    z-index: 2;
+
+    width: 100%;
+    height: 100%;
+    
+    background: -webkit-linear-gradient($couleur-secondaire, $couleur-primaire);
+    box-shadow: 0 5px 10px gray;
+
+    animation: disparition 4s linear 1;
+    animation-fill-mode: forwards;
+
+    .loading-spinner {
+        cursor: progress;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+    .loading-spinner::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+    .loading-spinner::after {
+        content: "";
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        margin: -50px 0 0 -50px;
+        border: 10px solid white;
+        border-top: 10px solid rgba(0,0,0,0);
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+        animation: loading 2s cubic-bezier(0.870, 0.180, 0.320, 0.870) 2;
+    }
+
+    span{
+        width: 300px;
+        margin-left: -150px;
+        
+        
+        position: absolute;
+        top: 25%;
+        left: 50%;
+
+        color: white;
+        font-size: 36px;
+        text-align: center;
+    }
+}
+
+@keyframes loading {
+    0% { transform: rotate(45deg); }
+    100% { transform: rotate(405deg); }
+}
+@keyframes disparition{
+    90%{
+        opacity: 1;
+    }
+    99%{
+        transform: scale(1);
+        z-index: 10;
+    }
+    100%{
+        opacity: 0;
+        transform: scale(0);
+        z-index: -5;
+    }
+}
+// Loading spinner
 
 
 
@@ -407,47 +483,78 @@ header{
                 //animation
 
 
-                li{
-                    margin-top: 14px;
-                    width: 100%;
+                .contenu{
+                    height: 70px;
+                    margin-top: 12px;
+
+                    display: flex;
+
+                    border-radius: 15px;
+                    background-color: white;
+                    box-shadow: 0 5px 10px $couleur-ombres;
+
+                    overflow: hidden;
 
                     cursor: pointer;
 
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-
-                    border-radius: 15px;
-                    box-shadow: 0 5px 10px $couleur-ombres;
-                    background-color: white;
-
-                    .page__carte__plat__description{
+                    .description{
                         width: 100%;
-                        padding-top: 16px;
-                        padding-bottom: 16px;
-                        padding-left: 10px;
-                        padding-right: 20px;
+                        padding: 16px 10px;
+                        
+                        display: block;
+                        
+                        overflow: hidden;
+                        
+                        h3{
+                            color: black;
 
-                        display: flex;
-                        justify-content: space-between;
-                        align-items: flex-end;
+                            font-size: medium;
+                            font-weight: 500;
 
-                        .page__carte__plat__description__texte{
+                            white-space: nowrap;
                             overflow: hidden;
+                            text-overflow: ellipsis;
+                        }
+                        p{
+                            margin-top: 8px;
                             
-                            h3{
-                                font-size: medium;
-                                color: black;
-                            }
-                            p{
-                                font-size: small;
-                                margin-top: 8px;
-                            }
-                        }
+                            color: black;
 
-                        .page__carte__plat__description__prix{
+                            font-size: small;
+                            font-weight: 300;
+
+                            white-space: nowrap;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
                         }
-                    }            
+                    }
+
+                    .prix{
+                        padding: 16px 10px;
+
+                        align-self: flex-end;
+                    }
+
+                    .checkbox{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        overflow: hidden;
+
+                        background-color: $couleur-tertiaire;
+
+                        i{
+                            font-size: medium;
+                            padding: 4px;
+
+                            border-radius: 25px;
+                            
+                            color: $couleur-tertiaire;
+
+                            background-color: white;
+                        }
+                    }
                 }
             }
         }
@@ -516,44 +623,20 @@ footer{
 .page{
     .page__carte{
         .page__carte__plat{
-            ul{
-                li{    
-                    .page__carte__plat__checkbox{
-                        width: 0;
+            .page__carte__plat__type{
+                .contenu{
+                    .checkbox{
+                        width: 0%;
                         
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-
-                        overflow: hidden;
-
-                        border-radius: 0 15px 15px 0;
-                        
-                        background-color: $couleur-tertiaire;
-
-                        transition: all 0.5s ease-out;
-                        i{
-                            padding: 5px;
-                            margin: 25px 30px;
-                            border-radius: 25px;
-
-                            font-size: 14px;
-
-                            transform: rotate(0deg);
-
-                            color: $couleur-tertiaire;
-                            background-color: white;
-                            
-                            transition: all 0s linear;
-                        }
+                        transition: all 500ms ease;
                     }
-                    
                     &:hover{
-                            .page__carte__plat__checkbox{
-                            width: 84px;
+                        .checkbox{
+                            width: 35%;
+
                             i{
                                 transform: rotate(360deg);
-                                transition: all 0.35s 0.1s linear;
+                                transition: all 400ms 150ms ease-out;
                             }
                         }
                     }
@@ -562,7 +645,7 @@ footer{
         }
     }
 }
-// checkbox
+//Checkbox
 
 .page__carte__titre__coeurs, .element__coeurs{
     .fa-heart{
@@ -624,6 +707,16 @@ footer{
 
 @media all and (min-width: 812px)
 {
+    .chargement{
+        top: 10%;
+        left: 20%;
+
+        width: 60%;
+        height: 80%;
+
+        border-radius: 50px;
+    }
+
     header{
         height: 100px;
         a{
@@ -650,6 +743,15 @@ footer{
     .resultats{
         padding-left: 15%;
         padding-right: 15%;
+
+        .resultats__grille{
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 18px;
+            column-gap: 36px;
+            grid-template-areas:
+            "carte1 carte2"
+            "carte3 carte4";
+        }
     }
 
     .page{
@@ -696,17 +798,7 @@ footer{
                     display: grid;
                     grid-template-columns: repeat(2, 1fr);
                     grid-gap: 30px;
-                    
-    
-                    h2{
-                        width: 100%;
-                    }
-                    
-                    li{
-                        margin-top: 0;
-                        width: auto;
-                        max-height: 74px;
-                    }
+                    row-gap: 18px;
                 } 
             }
         }

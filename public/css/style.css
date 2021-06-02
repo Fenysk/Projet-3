@@ -24,7 +24,7 @@ table {
   border-spacing: 0;
 }
 
-h1, h2, h3, h4, h5, h6, p, a, ul, li {
+h1, h2, h3, h4, h5, h6, p, a, ul, li, span {
   font-family: "Roboto", sans-serif;
   margin: 0;
   padding: 0;
@@ -56,6 +56,75 @@ span {
   font-weight: 500;
 }
 
+.chargement {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  background: -webkit-linear-gradient(#FF79DA, #9356DC);
+  box-shadow: 0 5px 10px gray;
+  animation: disparition 4s linear 1;
+  animation-fill-mode: forwards;
+}
+.chargement .loading-spinner {
+  cursor: progress;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.chargement .loading-spinner::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.chargement .loading-spinner::after {
+  content: "";
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  margin: -50px 0 0 -50px;
+  border: 10px solid white;
+  border-top: 10px solid rgba(0, 0, 0, 0);
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  animation: loading 2s cubic-bezier(0.87, 0.18, 0.32, 0.87) 2;
+}
+.chargement span {
+  width: 300px;
+  margin-left: -150px;
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  color: white;
+  font-size: 36px;
+  text-align: center;
+}
+
+@keyframes loading {
+  0% {
+    transform: rotate(45deg);
+  }
+  100% {
+    transform: rotate(405deg);
+  }
+}
+@keyframes disparition {
+  90% {
+    opacity: 1;
+  }
+  99% {
+    transform: scale(1);
+    z-index: 10;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0);
+    z-index: -5;
+  }
+}
 header {
   width: 100%;
   height: 64px;
@@ -320,37 +389,56 @@ header a i {
 .page .page__carte .page__carte__plat .page__carte__plat__type--3 {
   animation-delay: 900ms;
 }
-.page .page__carte .page__carte__plat .page__carte__plat__type li {
-  margin-top: 14px;
-  width: 100%;
-  cursor: pointer;
+.page .page__carte .page__carte__plat .page__carte__plat__type .contenu {
+  height: 70px;
+  margin-top: 12px;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
   border-radius: 15px;
-  box-shadow: 0 5px 10px #DDDDDD;
   background-color: white;
+  box-shadow: 0 5px 10px #DDDDDD;
+  overflow: hidden;
+  cursor: pointer;
 }
-.page .page__carte .page__carte__plat .page__carte__plat__type li .page__carte__plat__description {
+.page .page__carte .page__carte__plat .page__carte__plat__type .contenu .description {
   width: 100%;
-  padding-top: 16px;
-  padding-bottom: 16px;
-  padding-left: 10px;
-  padding-right: 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-}
-.page .page__carte .page__carte__plat .page__carte__plat__type li .page__carte__plat__description .page__carte__plat__description__texte {
+  padding: 16px 10px;
+  display: block;
   overflow: hidden;
 }
-.page .page__carte .page__carte__plat .page__carte__plat__type li .page__carte__plat__description .page__carte__plat__description__texte h3 {
-  font-size: medium;
+.page .page__carte .page__carte__plat .page__carte__plat__type .contenu .description h3 {
   color: black;
+  font-size: medium;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
-.page .page__carte .page__carte__plat .page__carte__plat__type li .page__carte__plat__description .page__carte__plat__description__texte p {
-  font-size: small;
+.page .page__carte .page__carte__plat .page__carte__plat__type .contenu .description p {
   margin-top: 8px;
+  color: black;
+  font-size: small;
+  font-weight: 300;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.page .page__carte .page__carte__plat .page__carte__plat__type .contenu .prix {
+  padding: 16px 10px;
+  align-self: flex-end;
+}
+.page .page__carte .page__carte__plat .page__carte__plat__type .contenu .checkbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background-color: #99E2D0;
+}
+.page .page__carte .page__carte__plat .page__carte__plat__type .contenu .checkbox i {
+  font-size: medium;
+  padding: 4px;
+  border-radius: 25px;
+  color: #99E2D0;
+  background-color: white;
 }
 .page .page__carte .page__carte__bouton {
   margin-top: 26px;
@@ -393,32 +481,16 @@ footer ul li a {
   color: white;
 }
 
-.page .page__carte .page__carte__plat ul li .page__carte__plat__checkbox {
-  width: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  border-radius: 0 15px 15px 0;
-  background-color: #99E2D0;
-  transition: all 0.5s ease-out;
+.page .page__carte .page__carte__plat .page__carte__plat__type .contenu .checkbox {
+  width: 0%;
+  transition: all 500ms ease;
 }
-.page .page__carte .page__carte__plat ul li .page__carte__plat__checkbox i {
-  padding: 5px;
-  margin: 25px 30px;
-  border-radius: 25px;
-  font-size: 14px;
-  transform: rotate(0deg);
-  color: #99E2D0;
-  background-color: white;
-  transition: all 0s linear;
+.page .page__carte .page__carte__plat .page__carte__plat__type .contenu:hover .checkbox {
+  width: 35%;
 }
-.page .page__carte .page__carte__plat ul li:hover .page__carte__plat__checkbox {
-  width: 84px;
-}
-.page .page__carte .page__carte__plat ul li:hover .page__carte__plat__checkbox i {
+.page .page__carte .page__carte__plat .page__carte__plat__type .contenu:hover .checkbox i {
   transform: rotate(360deg);
-  transition: all 0.35s 0.1s linear;
+  transition: all 400ms 150ms ease-out;
 }
 
 .page__carte__titre__coeurs .fa-heart, .element__coeurs .fa-heart {
@@ -462,6 +534,14 @@ footer ul li a {
 }
 
 @media all and (min-width: 812px) {
+  .chargement {
+    top: 10%;
+    left: 20%;
+    width: 60%;
+    height: 80%;
+    border-radius: 50px;
+  }
+
   header {
     height: 100px;
   }
@@ -488,6 +568,12 @@ footer ul li a {
   .resultats {
     padding-left: 15%;
     padding-right: 15%;
+  }
+  .resultats .resultats__grille {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 18px;
+    column-gap: 36px;
+    grid-template-areas: "carte1 carte2" "carte3 carte4";
   }
 
   .page--La-Palette-Du-Goût {
@@ -524,14 +610,7 @@ footer ul li a {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 30px;
-  }
-  .page .page__carte .page__carte__plat .page__carte__plat__type h2 {
-    width: 100%;
-  }
-  .page .page__carte .page__carte__plat .page__carte__plat__type li {
-    margin-top: 0;
-    width: auto;
-    max-height: 74px;
+    row-gap: 18px;
   }
 
   .bouton {
