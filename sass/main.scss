@@ -657,6 +657,15 @@ footer{
     .resultats{
         padding-left: 15%;
         padding-right: 15%;
+
+        .resultats__grille{
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 18px;
+            column-gap: 36px;
+            grid-template-areas:
+            "carte1 carte2"
+            "carte3 carte4";
+        }
     }
 
     .page{
