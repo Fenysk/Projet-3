@@ -321,7 +321,63 @@ header a i {
   animation-delay: 900ms;
 }
 .page .page__carte .page__carte__plat .page__carte__plat__type .contenu {
+  height: 70px;
   display: flex;
+  border-radius: 15px;
+  background-color: white;
+  box-shadow: 0 5px 10px #DDDDDD;
+  overflow: hidden;
+  cursor: pointer;
+}
+.page .page__carte .page__carte__plat .page__carte__plat__type .contenu .description {
+  width: 100%;
+  padding: 16px 10px;
+  display: block;
+  overflow: hidden;
+}
+.page .page__carte .page__carte__plat .page__carte__plat__type .contenu .description h3 {
+  color: black;
+  font-size: medium;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.page .page__carte .page__carte__plat .page__carte__plat__type .contenu .description p {
+  margin-top: 8px;
+  color: black;
+  font-size: small;
+  font-weight: 300;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.page .page__carte .page__carte__plat .page__carte__plat__type .contenu .prix {
+  padding: 16px 10px;
+  align-self: flex-end;
+}
+.page .page__carte .page__carte__plat .page__carte__plat__type .contenu .checkbox {
+  width: 0%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background-color: #99E2D0;
+  transition: all 500ms ease;
+}
+.page .page__carte .page__carte__plat .page__carte__plat__type .contenu .checkbox i {
+  font-size: medium;
+  padding: 4px;
+  border-radius: 25px;
+  color: #99E2D0;
+  background-color: white;
+}
+.page .page__carte .page__carte__plat .page__carte__plat__type .contenu:hover .checkbox {
+  width: 35%;
+}
+.page .page__carte .page__carte__plat .page__carte__plat__type .contenu:hover .checkbox i {
+  transform: rotate(-360deg);
+  transition: all 400ms 150ms ease-out;
 }
 .page .page__carte .page__carte__bouton {
   margin-top: 26px;
@@ -362,34 +418,6 @@ footer ul li i {
 }
 footer ul li a {
   color: white;
-}
-
-.page .page__carte .page__carte__plat ul li .page__carte__plat__checkbox {
-  width: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  border-radius: 0 15px 15px 0;
-  background-color: #99E2D0;
-  transition: all 0.5s ease-out;
-}
-.page .page__carte .page__carte__plat ul li .page__carte__plat__checkbox i {
-  padding: 5px;
-  margin: 25px 30px;
-  border-radius: 25px;
-  font-size: 14px;
-  transform: rotate(0deg);
-  color: #99E2D0;
-  background-color: white;
-  transition: all 0s linear;
-}
-.page .page__carte .page__carte__plat ul li:hover .page__carte__plat__checkbox {
-  width: 84px;
-}
-.page .page__carte .page__carte__plat ul li:hover .page__carte__plat__checkbox i {
-  transform: rotate(360deg);
-  transition: all 0.35s 0.1s linear;
 }
 
 .page__carte__titre__coeurs .fa-heart, .element__coeurs .fa-heart {
@@ -495,14 +523,6 @@ footer ul li a {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 30px;
-  }
-  .page .page__carte .page__carte__plat .page__carte__plat__type h2 {
-    width: 100%;
-  }
-  .page .page__carte .page__carte__plat .page__carte__plat__type li {
-    margin-top: 0;
-    width: auto;
-    max-height: 74px;
   }
 
   .bouton {

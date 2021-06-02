@@ -408,8 +408,91 @@ header{
 
 
                 .contenu{
+                    height: 70px;
+
                     display: flex;
-                    
+
+                    border-radius: 15px;
+                    background-color: white;
+                    box-shadow: 0 5px 10px $couleur-ombres;
+
+                    overflow: hidden;
+
+                    cursor: pointer;
+
+                    .description{
+                        width: 100%;
+                        padding: 16px 10px;
+                        
+                        display: block;
+                        
+                        overflow: hidden;
+                        
+                        h3{
+                            color: black;
+
+                            font-size: medium;
+                            font-weight: 500;
+
+                            white-space: nowrap;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                        }
+                        p{
+                            margin-top: 8px;
+                            
+                            color: black;
+
+                            font-size: small;
+                            font-weight: 300;
+
+                            white-space: nowrap;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                        }
+                    }
+
+                    .prix{
+                        padding: 16px 10px;
+
+                        align-self: flex-end;
+                    }
+
+                    .checkbox{
+                        width: 0%;
+
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        overflow: hidden;
+
+                        background-color: $couleur-tertiaire;
+
+                        i{
+                            font-size: medium;
+                            padding: 4px;
+
+                            border-radius: 25px;
+                            
+                            color: $couleur-tertiaire;
+
+                            background-color: white;
+                        }
+
+                        transition: all 500ms ease;
+                    }
+
+                    &:hover{
+                        .checkbox{
+                            width: 35%;
+
+                            i{
+                                transform: rotate(-360deg);
+                                transition: all 400ms 150ms ease-out;
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -474,57 +557,6 @@ footer{
   // ====================== //
  // ===== Animations ===== //
 //======================= //
-
-.page{
-    .page__carte{
-        .page__carte__plat{
-            ul{
-                li{    
-                    .page__carte__plat__checkbox{
-                        width: 0;
-                        
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-
-                        overflow: hidden;
-
-                        border-radius: 0 15px 15px 0;
-                        
-                        background-color: $couleur-tertiaire;
-
-                        transition: all 0.5s ease-out;
-                        i{
-                            padding: 5px;
-                            margin: 25px 30px;
-                            border-radius: 25px;
-
-                            font-size: 14px;
-
-                            transform: rotate(0deg);
-
-                            color: $couleur-tertiaire;
-                            background-color: white;
-                            
-                            transition: all 0s linear;
-                        }
-                    }
-                    
-                    &:hover{
-                            .page__carte__plat__checkbox{
-                            width: 84px;
-                            i{
-                                transform: rotate(360deg);
-                                transition: all 0.35s 0.1s linear;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-// checkbox
 
 .page__carte__titre__coeurs, .element__coeurs{
     .fa-heart{
@@ -658,17 +690,6 @@ footer{
                     display: grid;
                     grid-template-columns: repeat(2, 1fr);
                     grid-gap: 30px;
-                    
-    
-                    h2{
-                        width: 100%;
-                    }
-                    
-                    li{
-                        margin-top: 0;
-                        width: auto;
-                        max-height: 74px;
-                    }
                 } 
             }
         }
