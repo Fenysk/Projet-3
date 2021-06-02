@@ -420,7 +420,7 @@ footer ul li a {
   width: 35%;
 }
 .page .page__carte .page__carte__plat .page__carte__plat__type .contenu:hover .checkbox i {
-  transform: rotate(-360deg);
+  transform: rotate(360deg);
   transition: all 400ms 150ms ease-out;
 }
 

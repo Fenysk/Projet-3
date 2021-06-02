@@ -559,7 +559,7 @@ footer{
                             width: 35%;
 
                             i{
-                                transform: rotate(-360deg);
+                                transform: rotate(360deg);
                                 transition: all 400ms 150ms ease-out;
                             }
                         }
