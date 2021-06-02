@@ -60,41 +60,48 @@ span {
   position: fixed;
   z-index: 2;
   top: 10%;
-  left: 10%;
-  width: 80%;
+  left: 15%;
+  width: 70%;
   height: 80%;
   background-color: #99E2D0;
   animation: disparition 4s linear 1;
   animation-fill-mode: forwards;
 }
-
-.loading-spinner {
+.chargement .loading-spinner {
   cursor: progress;
   position: absolute;
   width: 100%;
   height: 100%;
 }
-
-.loading-spinner::before {
+.chargement .loading-spinner::before {
   content: "";
   position: absolute;
   width: 100%;
   height: 100%;
   overflow: hidden;
 }
-
-.loading-spinner::after {
+.chargement .loading-spinner::after {
   content: "";
   position: absolute;
-  top: 50%;
+  top: 60%;
   left: 50%;
-  margin: -25px 0 0 -25px;
-  border: 3px solid #9356DC;
-  border-top: 3px solid #99E2D0;
+  margin: -50px 0 0 -50px;
+  border: 10px solid white;
+  border-top: 10px solid #99E2D0;
   border-radius: 50%;
-  width: 50px;
-  height: 50px;
+  width: 100px;
+  height: 100px;
   animation: loading 2s cubic-bezier(0.87, 0.18, 0.32, 0.87) 2;
+}
+.chargement span {
+  width: 300px;
+  margin-left: -150px;
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  color: white;
+  font-size: 36px;
+  text-align: center;
 }
 
 @keyframes loading {
