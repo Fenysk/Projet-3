@@ -322,6 +322,7 @@ header a i {
 }
 .page .page__carte .page__carte__plat .page__carte__plat__type .contenu {
   height: 70px;
+  margin-top: 12px;
   display: flex;
   border-radius: 15px;
   background-color: white;
@@ -357,13 +358,11 @@ header a i {
   align-self: flex-end;
 }
 .page .page__carte .page__carte__plat .page__carte__plat__type .contenu .checkbox {
-  width: 0%;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
   background-color: #99E2D0;
-  transition: all 500ms ease;
 }
 .page .page__carte .page__carte__plat .page__carte__plat__type .contenu .checkbox i {
   font-size: medium;
@@ -371,13 +370,6 @@ header a i {
   border-radius: 25px;
   color: #99E2D0;
   background-color: white;
-}
-.page .page__carte .page__carte__plat .page__carte__plat__type .contenu:hover .checkbox {
-  width: 35%;
-}
-.page .page__carte .page__carte__plat .page__carte__plat__type .contenu:hover .checkbox i {
-  transform: rotate(-360deg);
-  transition: all 400ms 150ms ease-out;
 }
 .page .page__carte .page__carte__bouton {
   margin-top: 26px;
@@ -418,6 +410,18 @@ footer ul li i {
 }
 footer ul li a {
   color: white;
+}
+
+.page .page__carte .page__carte__plat .page__carte__plat__type .contenu .checkbox {
+  width: 0%;
+  transition: all 500ms ease;
+}
+.page .page__carte .page__carte__plat .page__carte__plat__type .contenu:hover .checkbox {
+  width: 35%;
+}
+.page .page__carte .page__carte__plat .page__carte__plat__type .contenu:hover .checkbox i {
+  transform: rotate(-360deg);
+  transition: all 400ms 150ms ease-out;
 }
 
 .page__carte__titre__coeurs .fa-heart, .element__coeurs .fa-heart {
@@ -523,6 +527,7 @@ footer ul li a {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 30px;
+    row-gap: 18px;
   }
 
   .bouton {

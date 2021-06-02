@@ -409,6 +409,7 @@ header{
 
                 .contenu{
                     height: 70px;
+                    margin-top: 12px;
 
                     display: flex;
 
@@ -459,8 +460,6 @@ header{
                     }
 
                     .checkbox{
-                        width: 0%;
-
                         display: flex;
                         justify-content: center;
                         align-items: center;
@@ -478,19 +477,6 @@ header{
                             color: $couleur-tertiaire;
 
                             background-color: white;
-                        }
-
-                        transition: all 500ms ease;
-                    }
-
-                    &:hover{
-                        .checkbox{
-                            width: 35%;
-
-                            i{
-                                transform: rotate(-360deg);
-                                transition: all 400ms 150ms ease-out;
-                            }
                         }
                     }
                 }
@@ -557,6 +543,33 @@ footer{
   // ====================== //
  // ===== Animations ===== //
 //======================= //
+
+.page{
+    .page__carte{
+        .page__carte__plat{
+            .page__carte__plat__type{
+                .contenu{
+                    .checkbox{
+                        width: 0%;
+                        
+                        transition: all 500ms ease;
+                    }
+                    &:hover{
+                        .checkbox{
+                            width: 35%;
+
+                            i{
+                                transform: rotate(-360deg);
+                                transition: all 400ms 150ms ease-out;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+//Checkbox
 
 .page__carte__titre__coeurs, .element__coeurs{
     .fa-heart{
@@ -690,6 +703,7 @@ footer{
                     display: grid;
                     grid-template-columns: repeat(2, 1fr);
                     grid-gap: 30px;
+                    row-gap: 18px;
                 } 
             }
         }
