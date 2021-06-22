@@ -543,6 +543,7 @@ footer ul li a {
 .bouton:hover {
   box-shadow: 4px 9px 10px #BBBBBB;
   transform: scale(1.1);
+  background: linear-gradient(180deg, #ff83dd, #985ede);
 }
 
 @media all and (min-width: 812px) {

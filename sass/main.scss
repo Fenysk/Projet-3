@@ -711,6 +711,7 @@ footer{
     &:hover{
         box-shadow: 4px 9px 10px $couleur-ombres-foncee;
         transform: scale(1.1);
+        background: linear-gradient(180deg,lighten($couleur-secondaire, 2%), lighten($couleur-primaire, 2%));
     }
 }
 
